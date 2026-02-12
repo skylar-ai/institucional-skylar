@@ -41,8 +41,8 @@
 <body>
     <div class="container">
         <h1>📄 Skylar - Legendas ao Vivo</h1>
-        <div class="spinner"></div>
-        <p>Iniciando download automaticamente...</p>
+        <div class="spinner" id="spinner"></div>
+        <p id="message">Iniciando download automaticamente...</p>
         <p>Se o download não iniciar, <a href="skylar-legendas-ao-vivo.pdf" download>clique aqui</a>.</p>
     </div>
     
@@ -55,6 +55,10 @@
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+                
+                // Para o spinner e atualiza a mensagem
+                document.getElementById('spinner').style.display = 'none';
+                document.getElementById('message').textContent = '✅ Download iniciado com sucesso!';
             }, 500);
         };
     </script>
