@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Documento Institucional</title>
+    <title>Skylar - Legendas ao Vivo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,48 +19,30 @@
             text-align: center;
             padding: 2rem;
         }
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 4px solid white;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        a {
-            color: white;
-            text-decoration: underline;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📄 Skylar - Legendas ao Vivo</h1>
-        <div class="spinner" id="spinner"></div>
-        <p id="message">Iniciando download automaticamente...</p>
-        <p>Se o download não iniciar, <a href="skylar-legendas-ao-vivo.pdf" download>clique aqui</a>.</p>
+        <p>Clique no botão para visualizar o documento institucional</p>
+        <a href="skylar-legendas-ao-vivo.pdf" target="_blank" class="btn">Abrir Documento</a>
     </div>
-    
-    <script>
-        window.onload = function() {
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = 'skylar-legendas-ao-vivo.pdf';
-                link.download = 'skylar-legendas-ao-vivo.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                // Para o spinner e atualiza a mensagem
-                document.getElementById('spinner').style.display = 'none';
-                document.getElementById('message').textContent = '✅ Download iniciado com sucesso!';
-            }, 500);
-        };
-    </script>
 </body>
 </html>
