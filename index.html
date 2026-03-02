@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=skylar-legendas-ao-vivo.pdf">
-    <title>Skylar - Legendas ao Vivo</title>
+    <title>Skylar</title>
+    <script>
+        const lang = (navigator.language || 'pt').toLowerCase();
+        if (lang.startsWith('es')) {
+            window.location.replace('skylar-subtitulos-en-vivo-es.pdf');
+        } else if (lang.startsWith('pt')) {
+            window.location.replace('skylar-legendas-ao-vivo.pdf');
+        } else {
+            window.location.replace('skylar-real-time-subtitles-en.pdf');
+        }
+    </script>
 </head>
 <body></body>
 </html>
