@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Skylar</title>
     <script>
-        var lang = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
+        const lang = (navigator.language || 'pt').toLowerCase();
         if (lang.startsWith('es')) {
             window.location.replace('skylar-subtitulos-en-vivo-es.pdf');
         } else if (lang.startsWith('pt')) {
